@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import "../App.css";
+import Hero from "./Hero";
+import Specials from "./Specials";
+import Testimonials from "./Testimonials";
+import About from "./About";
 
 const Main = () => {
   return (
-    <div>Main</div>
-  )
-}
+    <main>
+      <Hero />
+      <Specials />
+      <Testimonials />
+      <About />
+    </main>
+  );
+};
 
-export default Main
+export default Main;
