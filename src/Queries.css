@@ -1,0 +1,126 @@
+/********** MEDIA QUERIES **********/
+
+/***************************************/
+/* BELOW 1200PX (Landscape tablets) */
+/***************************************/
+
+@media (max-width: 75em) {
+  html {
+    /*9px / 16px*/
+    font-size: 56.25%;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .testimonial-section {
+    padding: 6.4rem;
+  }
+}
+
+/***************************************/
+/* BELOW 944PX (Tablets) */
+/***************************************/
+@media (max-width: 59em) {
+  html {
+    /* 8x / 16px = 0.5 */
+    font-size: 50%;
+  }
+
+  .main-nav {
+    padding: 2.4rem;
+  }
+
+  .main-nav-list {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-section,
+  .testimonial-section {
+    padding: 4.8rem 2.4rem;
+  }
+
+  .hero-wrapper {
+    column-gap: 5.2rem;
+    text-align: center;
+  }
+
+  .hero-img {
+    max-width: 80%;
+  }
+
+  .hero-description {
+    align-self: center;
+    max-width: 90%;
+  }
+
+  .testimonial-heading {
+    margin-bottom: 6.4rem;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+/***************************************/
+/* BELOW 768PX (Smaller Tablets) */
+/***************************************/
+@media (max-width: 48em) {
+  .testimonial-heading {
+    margin-bottom: 4.8rem;
+  }
+
+  .specials-heading .heading-primary {
+    margin-bottom: 2.4rem;
+  }
+
+  .specials-heading {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/***************************************/
+/* BELOW 544px (Phones) */
+/***************************************/
+
+@media (max-width: 34em) {
+  .container {
+    max-width: 100%;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .heading-primary {
+    font-size: 4.8rem;
+  }
+
+  .main-subhead {
+    font-size: 3.2rem;
+  }
+
+  .hero-img {
+    height: 46rem;
+    width: 100%;
+  }
+
+  .testimonial {
+    width: 40rem;
+  }
+}

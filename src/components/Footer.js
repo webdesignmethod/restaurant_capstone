@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../Logo.svg";
 import "../App.css";
 
@@ -6,34 +7,41 @@ const Footer = () => {
   return (
     <footer>
       <div className="container footer-wrapper p-64">
-        <img className="flex-start" src={Logo} alt="Little Lemon Cafe Logo" />
+        <NavLink className="main-nav-link" to="/">
+          <img className="main-logo" src={Logo} alt="Little Lemon Cafe Logo" />
+        </NavLink>
         <nav className="footer-col">
           <p className="footer-subhead">Little Lemon</p>
           <ul className="footer-nav">
             <li>
-              <a className="footer-link" href="#">
+              <NavLink className="footer-link" to="/">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="footer-link" to="/about">
                 About
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="footer-link" href="#">
+              <NavLink className="footer-link" to="/menu">
                 Menu
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="footer-link" href="#">
+              <NavLink className="footer-link" to="/reservations">
                 Reservations
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="footer-link" href="#">
+              <NavLink className="footer-link" to="/order">
                 Order Online
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="footer-link" href="#">
+              <NavLink className="footer-link" to="/login">
                 Login
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
