@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "../../App.css";
 import Hero from "./Hero";
 import Specials from "./Specials";
 import Testimonials from "./Testimonials";

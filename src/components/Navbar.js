@@ -10,6 +10,10 @@ import Logo from "../Logo.svg";
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
 
+  function CloseNav() {
+    setToggleNav(false);
+  }
+
   return (
     <nav className="main-nav">
       <NavLink className="main-nav-link" to="/">
@@ -32,7 +36,7 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className="main-nav-link" to="/reservations">
+          <NavLink className="main-nav-link" to="/bookings">
             Reservations
           </NavLink>
         </li>
@@ -61,36 +65,56 @@ const Navbar = () => {
             <MdFastfood
               fontSize={30}
               className="overlay-close"
-              onClick={() => setToggleNav(false)}
+              onClick={CloseNav}
             />
             <ul className="mobile-nav-list">
               <li>
-                <NavLink className="mobile-nav-link" to="/">
+                <NavLink className="mobile-nav-link" to="/" onClick={CloseNav}>
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink className="mobile-nav-link" to="/about">
+                <NavLink
+                  className="mobile-nav-link"
+                  to="/about"
+                  onClick={CloseNav}
+                >
                   About
                 </NavLink>
               </li>
               <li>
-                <NavLink className="mobile-nav-link" to="/menu">
+                <NavLink
+                  className="mobile-nav-link"
+                  to="/menu"
+                  onClick={CloseNav}
+                >
                   Menu
                 </NavLink>
               </li>
               <li>
-                <NavLink className="mobile-nav-link" to="/reservations">
+                <NavLink
+                  className="mobile-nav-link"
+                  to="/bookings"
+                  onClick={CloseNav}
+                >
                   Reservations
                 </NavLink>
               </li>
               <li>
-                <NavLink className="mobile-nav-link" to="/order">
+                <NavLink
+                  className="mobile-nav-link"
+                  to="/order"
+                  onClick={CloseNav}
+                >
                   Order Online
                 </NavLink>
               </li>
               <li>
-                <NavLink className="mobile-nav-link" to="/login">
+                <NavLink
+                  className="mobile-nav-link"
+                  to="/login"
+                  onClick={CloseNav}
+                >
                   Login
                 </NavLink>
               </li>

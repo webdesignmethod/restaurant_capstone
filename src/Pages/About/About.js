@@ -1,6 +1,6 @@
 import React from "react";
-import "../App.css";
-import Chefs from "../images/chefs.jpg";
+import "../../App.css";
+import Chefs from "../../images/chefs.jpg";
 
 const About = () => {
   return (

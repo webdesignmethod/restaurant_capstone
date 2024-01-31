@@ -1,20 +1,20 @@
 import React from "react";
-import "../App.css";
-import Reviewer1 from "../images/testimonial-1.jpg";
-import Reviewer2 from "../images/testimonial-2.jpg";
-import Reviewer3 from "../images/testimonial-3.jpg";
-import Reviewer4 from "../images/testimonial-4.jpg";
+import "../../App.css";
+import Reviewer1 from "../../images/testimonial-1.jpg";
+import Reviewer2 from "../../images/testimonial-2.jpg";
+import Reviewer3 from "../../images/testimonial-3.jpg";
+import Reviewer4 from "../../images/testimonial-4.jpg";
 
 const Testimonials = () => {
   return (
     <section className="testimonial-section">
-      <div className="testimonial-wrapper flex container">
+      <div className="testimonial-wrapper flex">
         <div className="testimonial-heading">
           <h1 className="heading-primary">Testimonials</h1>
         </div>
         <div className="testimonials-container ">
           <div className="testimonial br-16">
-            <div class="rating-icons">
+            <div className="rating-icons">
               <ion-icon class="star-icon" name="star"></ion-icon>
               <ion-icon class="star-icon" name="star"></ion-icon>
               <ion-icon class="star-icon" name="star"></ion-icon>
@@ -37,7 +37,7 @@ const Testimonials = () => {
           </div>
 
           <div className="testimonial br-16">
-            <div class="rating-icons">
+            <div className="rating-icons">
               <ion-icon class="star-icon" name="star"></ion-icon>
               <ion-icon class="star-icon" name="star"></ion-icon>
               <ion-icon class="star-icon" name="star"></ion-icon>
@@ -62,7 +62,7 @@ const Testimonials = () => {
           </div>
 
           <div className="testimonial br-16">
-            <div class="rating-icons">
+            <div className="rating-icons">
               <ion-icon class="star-icon" name="star"></ion-icon>
               <ion-icon class="star-icon" name="star"></ion-icon>
               <ion-icon class="star-icon" name="star"></ion-icon>
@@ -85,7 +85,7 @@ const Testimonials = () => {
           </div>
 
           <div className="testimonial br-16">
-            <div class="rating-icons">
+            <div className="rating-icons">
               <ion-icon class="star-icon" name="star"></ion-icon>
               <ion-icon class="star-icon" name="star"></ion-icon>
               <ion-icon class="star-icon" name="star"></ion-icon>

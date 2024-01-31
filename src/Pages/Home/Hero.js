@@ -1,11 +1,18 @@
 import React from "react";
-import "../App.css";
-import heroImg from "../images/hero.jpg";
+import "../../App.css";
+import { useNavigate } from "react-router-dom";
+import heroImg from "../../images/hero.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/bookings");
+  }
+
   return (
     <section className="hero-section">
-      <div className="hero-wrapper grid grid-cols-2 container">
+      <div className="hero-wrapper grid grid-cols-2">
         <div className="hero-text flex">
           <h1 className="heading-primary">Little Lemon</h1>
           <p className="main-subhead">Chicago</p>
@@ -15,13 +22,16 @@ const Hero = () => {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
             enim, temporibus suscipit eligendi architecto illum dolores ipsa vel
             dicta? Ipsum vel dolorum, sequi quia ab accusamus facilis ipsa rem
-            ducimus?
+            ducimus? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Enim possimus, accusamus maiores alias doloribus quae. Accusantium
+            itaque beatae similique nam quaerat unde ea repellat, facilis autem
+            saepe aut labore enim!
           </p>
           <div className="hero-nav">
             <div>
-              <a href="#" className="hero-btn br-16">
+              <button className="yellow-btn br-16 center" onClick={handleClick}>
                 Reserve a Table
-              </a>
+              </button>
             </div>
           </div>
         </div>

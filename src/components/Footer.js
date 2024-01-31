@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../Logo.svg";
+import VerticalLogo from "../images/vertical-logo.png";
 import "../App.css";
 
 const Footer = () => {
@@ -8,7 +8,11 @@ const Footer = () => {
     <footer>
       <div className="container footer-wrapper p-64">
         <NavLink className="main-nav-link" to="/">
-          <img className="main-logo" src={Logo} alt="Little Lemon Cafe Logo" />
+          <img
+            className="footer-logo"
+            src={VerticalLogo}
+            alt="Little Lemon Cafe Logo"
+          />
         </NavLink>
         <nav className="footer-col">
           <p className="footer-subhead">Little Lemon</p>

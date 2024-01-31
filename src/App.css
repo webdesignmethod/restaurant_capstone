@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -18,14 +22,20 @@ body {
 }
 
 .heading-primary {
-  font-family: "Markazi Text", Arial, Helvetica, sans-serif;
+  font-family: "Markazi Text", "Times New Roman", Times, serif;
   font-size: 64px;
+  font-weight: 500;
+}
+
+.heading-secondary {
+  font-family: "Markazi Text", "Times New Roman", Times, serif;
+  font-size: 48px;
   font-weight: 500;
 }
 
 .main-subhead {
   color: #fff;
-  font-family: "Markazi Text", Arial, Helvetica, sans-serif;
+  font-family: "Markazi Text", "Times New Roman", Times, serif;
   font-size: 40px;
   font-weight: 500;
   margin-bottom: 1.6rem;
@@ -61,10 +71,31 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.yellow-btn {
+  background-color: #f4ce14;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Karla", Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.yellow-btn:hover {
+  background-color: #fbbf24;
+}
+
+/*********** MAIN NAVIGATION ***********/
+
 .main-logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: 6rem;
 }
 
 .main-nav {
@@ -99,7 +130,7 @@ body {
   color: #495e57;
 }
 
-/*********** SPECIALS SECTION ***********/
+/*********** MOBILE NAVIGATION ***********/
 
 .mobile-nav {
   display: none;
@@ -212,26 +243,8 @@ body {
   color: #fff;
   font-size: 1.6rem;
   line-height: 1.5;
-  margin-bottom: 1.6rem;
-  width: 60%;
-}
-
-.hero-btn:link,
-.hero-btn:visited {
-  background-color: #f4ce14;
-  color: #333;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.6rem;
-  font-weight: 800;
-  padding: 1.2rem 1.6rem;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.hero-btn:hover,
-.hero-btn:active {
-  background-color: #fbbf24;
+  margin-bottom: 2.4rem;
+  /* width: 60%; */
 }
 
 .hero-img {
@@ -254,25 +267,6 @@ body {
   margin-bottom: 9.6rem;
 }
 
-.specials-btn:link,
-.specials-btn:visited {
-  background-color: #f4ce14;
-  color: #333;
-  cursor: pointer;
-  display: flex;
-  align-self: center;
-  font-size: 1.8rem;
-  font-weight: 800;
-  padding: 2rem 4rem;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.specials-btn:hover,
-.specials-btn:active {
-  background-color: #fbbf24;
-}
-
 .card-columns-container {
   gap: 6.4rem;
 }
@@ -287,6 +281,7 @@ body {
 
 .card-image {
   display: block;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -308,6 +303,7 @@ body {
 
 .card-price {
   color: #ee9972;
+  font-weight: 700;
   font-size: 1.6rem;
 }
 
@@ -353,6 +349,9 @@ body {
 }
 
 .testimonial {
+  display: flex;
+  flex-direction: column;
+
   background: #fff;
   -webkit-box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
   box-shadow: 12px 12px 24px #b2b8c9a1, -12px -12px 24px #e7e7e77a;
@@ -389,7 +388,7 @@ body {
   gap: 1.6rem;
 }
 
-/***** HERO SECTION *****/
+/***** ABOUT SECTION *****/
 .about-section .main-subhead {
   color: #333;
 }
@@ -422,6 +421,112 @@ body {
   width: 100%;
 }
 
+/*********** BOOKING SECTION ***********/
+.booking-section .heading-primary {
+  color: #fff;
+}
+
+.booking-section {
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  padding: 4.8rem;
+}
+
+label {
+  color: #333;
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin-bottom: 1rem;
+}
+
+.booking-form {
+  width: 36rem;
+  background: #fff;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 1.6rem;
+  font-family: "Karla", Arial, Helvetica, sans-serif;
+  padding: 2.4rem;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+#res-date,
+#res-time,
+#guests,
+#occasion {
+  background: #fff;
+  border: 2px solid #edefee;
+  border-radius: 0.8rem;
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  margin-bottom: 2.4rem;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.submit-btn {
+  backdrop-filter: blur(5px);
+  background: -webkit-linear-gradient(to bottom, #f4ce14, #f59e0b);
+  background: -moz-linear-gradient(to bottom, #f4ce14, #f59e0b);
+  background: linear-gradient(to bottom, #f4ce14, #f59e0b);
+  border-radius: 1.6rem;
+  border: none;
+  color: #fcfcff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1.4rem 2rem;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background: -webkit-linear-gradient(top, #fbbf24, #f59e0b);
+  background: -moz-linear-gradient(top, #fbbf24, #f59e0b);
+  background: linear-gradient(to bottom, #fbbf24, #f59e0b);
+}
+
+.reservation-description {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 1.6rem;
+}
+
+/*********** CONFIRMATION SECTION ***********/
+.confirmation-section {
+  background-color: #f4ce14;
+  padding: 9.6rem;
+}
+
+/*********** EMPTY PAGES ***********/
+.order-section,
+.menu-section,
+.login-section {
+  background-color: #f4ce14;
+  padding: 9.6rem;
+}
+
 /***** FOOTER *****/
 footer {
   background: #333;
@@ -435,6 +540,14 @@ footer {
   row-gap: 64px;
   column-gap: 64px;
   padding: 4.8rem;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* height: 3.2rem; */
+  width: 11rem;
 }
 
 .footer-logo-container {

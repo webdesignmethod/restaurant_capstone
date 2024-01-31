@@ -1,24 +1,34 @@
 import React from "react";
-import Bruschetta from "../images/bruschetta.svg";
+import { useNavigate } from "react-router-dom";
+import greekSalad from "../../images/greek-salad.jpg";
+import bruschetta from "../../images/bruschetta.svg";
+import lemonDessert from "../../images/lemondessert.jpg";
+import "../../App.css";
 
 const Specials = () => {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/menu");
+  }
+
   return (
     <section className="specials-section">
       <div className="specials-wrapper">
         <div className="specials-heading flex">
           <h1 className="heading-primary">This week's specials!</h1>
-          <a href="" className="specials-btn br-16">
+          <button className="yellow-btn br-16" onClick={handleClick}>
             Online Menu
-          </a>
+          </button>
         </div>
 
-        <div class="card-columns-container grid grid-cols-3">
+        <div className="card-columns-container grid grid-cols-3">
           <div className="card">
-            <img src={Bruschetta} alt="" className="card-image" />
+            <img src={greekSalad} alt="" className="card-image" />
             <div className="card-content">
               <div className="card-heading flex">
-                <div className="card-subhead">Subhead</div>
-                <div className="card-price">Price</div>
+                <div className="card-subhead">Greek Salad</div>
+                <div className="card-price">$6.99</div>
               </div>
               <p className="card-description">
                 The famous greek salad of crispy lettuce, peppers, olives and
@@ -28,11 +38,11 @@ const Specials = () => {
             </div>
           </div>
           <div className="card">
-            <img src={Bruschetta} alt="" className="card-image" />
+            <img src={bruschetta} alt="" className="card-image" />
             <div className="card-content">
               <div className="card-heading flex">
-                <div className="card-subhead">Subhead</div>
-                <div className="card-price">Price</div>
+                <div className="card-subhead">Bruschetta</div>
+                <div className="card-price">$4.99</div>
               </div>
               <p className="card-description">
                 The famous greek salad of crispy lettuce, peppers, olives and
@@ -42,11 +52,11 @@ const Specials = () => {
             </div>
           </div>
           <div className="card">
-            <img src={Bruschetta} alt="" className="card-image" />
+            <img src={lemonDessert} alt="" className="card-image" />
             <div className="card-content">
               <div className="card-heading flex">
-                <div className="card-subhead">Subhead</div>
-                <div className="card-price">Price</div>
+                <div className="card-subhead">Lemon Dessert</div>
+                <div className="card-price">$4.00</div>
               </div>
               <p className="card-description">
                 The famous greek salad of crispy lettuce, peppers, olives and
