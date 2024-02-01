@@ -8,8 +8,12 @@ import "../../App.css";
 const Specials = () => {
   const navigate = useNavigate();
 
-  function handleClick() {
+  function handleMenuClick() {
     navigate("/menu");
+  }
+
+  function handleOrderClick() {
+    navigate("/order");
   }
 
   return (
@@ -17,7 +21,7 @@ const Specials = () => {
       <div className="specials-wrapper">
         <div className="specials-heading flex">
           <h1 className="heading-primary">This week's specials!</h1>
-          <button className="yellow-btn br-16" onClick={handleClick}>
+          <button className="yellow-btn br-16" onClick={handleMenuClick}>
             Online Menu
           </button>
         </div>
@@ -35,8 +39,14 @@ const Specials = () => {
                 our Chicago style feta cheese, garnished with crunchy garlic and
                 rosemary croutons.
               </p>
+
+              <button className="card-btn" onClick={handleOrderClick}>
+                Order a delivery
+                <ion-icon class="card-icon" name="restaurant"></ion-icon>
+              </button>
             </div>
           </div>
+
           <div className="card">
             <img src={bruschetta} alt="" className="card-image" />
             <div className="card-content">
@@ -49,8 +59,14 @@ const Specials = () => {
                 our Chicago style feta cheese, garnished with crunchy garlic and
                 rosemary croutons.
               </p>
+
+              <button className="card-btn" onClick={handleOrderClick}>
+                Order a delivery
+                <ion-icon class="card-icon" name="restaurant"></ion-icon>
+              </button>
             </div>
           </div>
+
           <div className="card">
             <img src={lemonDessert} alt="" className="card-image" />
             <div className="card-content">
@@ -63,6 +79,11 @@ const Specials = () => {
                 our Chicago style feta cheese, garnished with crunchy garlic and
                 rosemary croutons.
               </p>
+
+              <button className="card-btn" onClick={handleOrderClick}>
+                Order a delivery
+                <ion-icon class="card-icon" name="restaurant"></ion-icon>
+              </button>
             </div>
           </div>
         </div>

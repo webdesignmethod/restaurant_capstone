@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   const startDate = new Date().toISOString().split("T")[0];
+  const minGuests = 1;
+
   const [date, setDate] = useState(startDate);
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState("");
@@ -45,10 +47,10 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
         required={true}
       >
         <option value="">Select a time</option>
-        {availableTimes.map((time, i) => {
+        {availableTimes?.map((times) => {
           return (
-            <option key={i} value={time}>
-              {time}
+            <option data-testid="time-option" key={times} value={times}>
+              {times}
             </option>
           );
         })}
@@ -58,7 +60,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
       <input
         type="number"
         placeholder="1"
-        min="1"
+        min={minGuests}
         name="guests"
         id="guests"
         value={guests}
@@ -77,11 +79,13 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
         <option value="">Select an occasion</option>
         <option value="birthday">Birthday</option>
         <option value="anniversary">Anniversary</option>
+        <option value="meeting">Meeting</option>
+        <option value="none">None</option>
       </select>
       <input
         disabled={!date || !time || !guests || !occasion}
         type="submit"
-        value="Make Your reservation"
+        value="Make your reservation"
         className="submit-btn"
       />
       <p className="reservation-description">
@@ -91,5 +95,4 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
     </form>
   );
 };
-
 export default BookingForm;

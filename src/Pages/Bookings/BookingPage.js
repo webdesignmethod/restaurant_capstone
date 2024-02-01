@@ -31,7 +31,9 @@ const BookingPage = () => {
 
   return (
     <div className="booking-section">
-      <h1 className="heading-primary">Reserve a Table</h1>
+      <h1 className="heading-primary" data-test-id="bookingHeading">
+        Reserve a Table
+      </h1>
       <BookingForm
         availableTimes={availableTimes}
         dispatch={dispatch}

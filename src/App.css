@@ -310,6 +310,27 @@ body {
 .card-description {
   font-size: 1.6rem;
   line-height: 1.5;
+  margin-bottom: 1.6rem;
+}
+
+.card-icon {
+  color: #333;
+  height: 2rem;
+  width: 2rem;
+}
+
+.card-btn {
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 /*********** TESTIMONIAL SECTION ***********/
@@ -428,7 +449,7 @@ body {
 
 .booking-section {
   height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../src/images/table.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -488,7 +509,7 @@ textarea::placeholder {
   background: -webkit-linear-gradient(to bottom, #f4ce14, #f59e0b);
   background: -moz-linear-gradient(to bottom, #f4ce14, #f59e0b);
   background: linear-gradient(to bottom, #f4ce14, #f59e0b);
-  border-radius: 1.6rem;
+  border-radius: 0.8rem;
   border: none;
   color: #fcfcff;
   cursor: pointer;
