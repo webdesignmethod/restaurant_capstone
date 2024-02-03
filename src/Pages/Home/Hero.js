@@ -29,14 +29,18 @@ const Hero = () => {
           </p>
           <div className="hero-nav">
             <div>
-              <button className="yellow-btn br-16 center" onClick={handleClick}>
+              <button
+                aria-label="On Click"
+                className="yellow-btn br-16 center"
+                onClick={handleClick}
+              >
                 Reserve a Table
               </button>
             </div>
           </div>
         </div>
         <div>
-          <img className="hero-img br-16" src={heroImg} alt="Chef image" />
+          <img className="hero-img br-16" src={heroImg} alt="Chef" />
         </div>
       </div>
     </section>

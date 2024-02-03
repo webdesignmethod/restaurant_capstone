@@ -21,7 +21,11 @@ const Specials = () => {
       <div className="specials-wrapper">
         <div className="specials-heading flex">
           <h1 className="heading-primary">This week's specials!</h1>
-          <button className="yellow-btn br-16" onClick={handleMenuClick}>
+          <button
+            aria-label="On Click"
+            className="yellow-btn br-16"
+            onClick={handleMenuClick}
+          >
             Online Menu
           </button>
         </div>
@@ -40,7 +44,11 @@ const Specials = () => {
                 rosemary croutons.
               </p>
 
-              <button className="card-btn" onClick={handleOrderClick}>
+              <button
+                aria-label="On Click"
+                className="card-btn"
+                onClick={handleOrderClick}
+              >
                 Order a delivery
                 <ion-icon class="card-icon" name="restaurant"></ion-icon>
               </button>
@@ -60,7 +68,11 @@ const Specials = () => {
                 rosemary croutons.
               </p>
 
-              <button className="card-btn" onClick={handleOrderClick}>
+              <button
+                aria-label="On Click"
+                className="card-btn"
+                onClick={handleOrderClick}
+              >
                 Order a delivery
                 <ion-icon class="card-icon" name="restaurant"></ion-icon>
               </button>
@@ -80,7 +92,11 @@ const Specials = () => {
                 rosemary croutons.
               </p>
 
-              <button className="card-btn" onClick={handleOrderClick}>
+              <button
+                aria-label="On Click"
+                className="card-btn"
+                onClick={handleOrderClick}
+              >
                 Order a delivery
                 <ion-icon class="card-icon" name="restaurant"></ion-icon>
               </button>

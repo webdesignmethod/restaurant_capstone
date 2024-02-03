@@ -489,13 +489,19 @@ input[type="number"] {
 #guests,
 #occasion {
   background: #fff;
-  border: 2px solid #edefee;
+  border: 1px solid #edefee;
   border-radius: 0.8rem;
   display: block;
   font-size: 1.6rem;
   padding: 1rem 2rem;
   margin-bottom: 2.4rem;
   width: 100%;
+  transition: border 256ms ease-in-out;
+}
+
+.booking-form *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.05rem #64748b;
 }
 
 input::placeholder,
@@ -514,8 +520,9 @@ textarea::placeholder {
   color: #fcfcff;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-family: "Karla", Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
   padding: 1.4rem 2rem;
   width: 100%;
   transition: all 0.3s;
