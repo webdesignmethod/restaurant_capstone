@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className="mobile-overlay openNav">
             <MdFastfood
               fontSize={30}
-              className="overlay-close"
+              className="mobile-nav-close-icon"
               onClick={CloseNav}
             />
             <ul className="mobile-nav-list">

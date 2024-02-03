@@ -69,25 +69,29 @@ const Footer = () => {
         <div className="social-media">
           <p className="footer-subhead">Social Media</p>
           <ul className="social-icons">
-            <li>
+            <li className="social-icon-container">
               <a href="#" className="social-link">
                 <ion-icon class="social-icon" name="logo-youtube"></ion-icon>
               </a>
+              <p className="social-icon-label">Youtube</p>
             </li>
-            <li>
+            <li className="social-icon-container">
               <a href="#" className="social-link">
                 <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
               </a>
+              <p className="social-icon-label">Facebook</p>
             </li>
-            <li>
+            <li className="social-icon-container">
               <a href="#" className="social-link">
                 <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
               </a>
+              <p className="social-icon-label">Twitter</p>
             </li>
-            <li>
+            <li className="social-icon-container">
               <a href="#" className="social-link">
                 <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
               </a>
+              <p className="social-icon-label">Instagram</p>
             </li>
           </ul>
         </div>
