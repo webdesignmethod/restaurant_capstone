@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className="main-nav">
-      <NavLink className="main-nav-link" to="/">
+      <NavLink className="logo-link" to="/">
         <img className="main-logo" src={Logo} alt="Little Lemon Cafe Logo" />
       </NavLink>
       <ul className="main-nav-list">
