@@ -9,10 +9,12 @@ test("Renders the BookingForm heading", () => {
 });
 
 describe("Booking form tests", () => {
+  const testFirstName = 'John';
+  const testLastName = 'Doe';
   const availableTimes = ["17:00"];
   const defaultDate = new Date().toISOString().split("T")[0];
   const defaultGuest = 1;
-  const occasions = ["Birthday"];
+  const occasions = ["Meeting"];
 
   const dispatch = jest.fn();
   const submitForm = jest.fn();
@@ -23,25 +25,30 @@ describe("Booking form tests", () => {
       <BookingForm availableTimes={availableTimes} submitForm={submitForm} />
     );
 
-    const dateInputEl = screen.getByLabelText(/choose date/i);
-    const timeInputEl = screen.getByLabelText(/choose time/i);
-    const guestInputEl = screen.getByLabelText(/number of guests/i);
-    const occasionInputEl = screen.getByLabelText(/occasion/i);
+    const fNameInput = screen.getByLabelText(/first name/i);
+    const dateInput = screen.getByLabelText(/choose date/i);
+    const timeInput = screen.getByLabelText(/choose time/i);
+    const guestInput = screen.getByLabelText(/number of guests/i);
+    const occasionInput = screen.getByLabelText(/occasion/i);
     const submitBtn = screen.getByRole("button");
 
-    expect(dateInputEl).toBeInTheDocument();
-    expect(dateInputEl).toHaveAttribute("type", "date");
-    expect(dateInputEl).toHaveAttribute("id", "res-date");
+    expect(fNameInput).toBeInTheDocument();
+    expect(fNameInput).toHaveAttribute("type", "text");
+    expect(fNameInput).toHaveAttribute("id", "res-first-name");
 
-    expect(timeInputEl).toBeInTheDocument();
-    expect(timeInputEl).toHaveAttribute("id", "res-time");
+    expect(dateInput).toBeInTheDocument();
+    expect(dateInput).toHaveAttribute("type", "date");
+    expect(dateInput).toHaveAttribute("id", "res-date");
 
-    expect(guestInputEl).toBeInTheDocument();
-    expect(guestInputEl).toHaveAttribute("type", "number");
-    expect(guestInputEl).toHaveAttribute("id", "guests");
+    expect(timeInput).toBeInTheDocument();
+    expect(timeInput).toHaveAttribute("id", "res-time");
 
-    expect(occasionInputEl).toBeInTheDocument();
-    expect(occasionInputEl).toHaveAttribute("id", "occasion");
+    expect(guestInput).toBeInTheDocument();
+    expect(guestInput).toHaveAttribute("type", "number");
+    expect(guestInput).toHaveAttribute("id", "guests");
+
+    expect(occasionInput).toBeInTheDocument();
+    expect(occasionInput).toHaveAttribute("id", "occasion");
 
     expect(submitBtn).toBeInTheDocument();
     expect(submitBtn).toHaveAttribute("type", "submit");
@@ -52,11 +59,22 @@ describe("Booking form tests", () => {
     render(
       <BookingForm availableTimes={availableTimes} submitForm={submitForm} />
     );
+    const fNameInput = screen.getByLabelText(/first name/i);
+    const lNameInput = screen.getByLabelText(/last name/i);
+    const occasionInput = screen.getByLabelText(/occasion/i);
     const submitBtn = screen.getByRole("button");
+    
+    fireEvent.change(fNameInput, { target: { value: testFirstName } });
+
+    fireEvent.change(lNameInput, { target: { value: testLastName } });
+
+    fireEvent.change(occasionInput, { target: { value: occasions[0] } });
 
     fireEvent.click(submitBtn);
 
     expect(submitForm).toHaveBeenCalledWith({
+      firstName: testFirstName,
+      lastName: testLastName,
       date: defaultDate,
       time: availableTimes[0],
       guests: defaultGuest,
@@ -73,16 +91,16 @@ describe("Booking form tests", () => {
       />
     );
 
-    const dateInputEl = screen.getByLabelText(/choose date/i);
-    const timeInputEl = screen.getByLabelText(/choose time/i);
-    const guestInputEl = screen.getByLabelText(/number of guests/i);
-    const occasionInputEl = screen.getByLabelText(/occasion/i);
+    const dateInput = screen.getByLabelText(/choose date/i);
+    const timeInput = screen.getByLabelText(/choose time/i);
+    const guestInput = screen.getByLabelText(/number of guests/i);
+    const occasionInput = screen.getByLabelText(/occasion/i);
     const submitBtn = screen.getByRole("button");
 
-    fireEvent.change(dateInputEl, { target: { value: "" } });
-    fireEvent.change(timeInputEl, { target: { value: "" } });
-    fireEvent.change(guestInputEl, { target: { value: "" } });
-    fireEvent.change(occasionInputEl, { target: { value: "" } });
+    fireEvent.change(dateInput, { target: { value: "" } });
+    fireEvent.change(timeInput, { target: { value: "" } });
+    fireEvent.change(guestInput, { target: { value: "" } });
+    fireEvent.change(occasionInput, { target: { value: "" } });
 
     fireEvent.click(submitBtn);
 
