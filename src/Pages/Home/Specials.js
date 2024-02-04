@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import greekSalad from "../../images/greek-salad.jpg";
+import greekSalad from "../../images/greeksalad.jpg";
 import bruschetta from "../../images/bruschetta.svg";
 import lemonDessert from "../../images/lemondessert.jpg";
 import "../../App.css";
