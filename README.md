@@ -1,4 +1,4 @@
-# Little Lemon Capstone
+# Restaurant Capstone Project
 
 ## Available Scripts
 
