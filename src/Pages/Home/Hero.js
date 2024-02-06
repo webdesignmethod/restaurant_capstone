@@ -21,11 +21,10 @@ const Hero = () => {
             traditional recipes served with a modern twist. <br />
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
             enim, temporibus suscipit eligendi architecto illum dolores ipsa vel
-            dicta? Ipsum vel dolorum, sequi quia ab accusamus facilis ipsa rem
+            dicta? Ipsum vel dolorum facilis ipsa rem
             ducimus? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Enim possimus, accusamus maiores alias doloribus quae. Accusantium
-            itaque beatae similique nam quaerat unde ea repellat, facilis autem
-            saepe aut labore enim!
+            itaque beatae similique nam quaerat unde saepe aut labore enim!
           </p>
           <div className="hero-nav">
             <div>

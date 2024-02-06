@@ -20,6 +20,7 @@ const About = () => {
               soluta aut suscipit ea vel aspernatur quidem..
             </p>
           </div>
+          
           <div>
             <img className="about-img" src={Chefs} alt="Chefs image" />
           </div>

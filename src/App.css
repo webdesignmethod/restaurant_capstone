@@ -248,7 +248,8 @@ body {
 }
 
 .hero-section {
-  background-color: #495e57;
+  background-color: #333;
+  height: 100%;
   padding: 9.6rem;
 }
 
@@ -273,7 +274,7 @@ body {
   display: block;
   object-fit: cover;
   object-position: center;
-  height: 50rem;
+  height: 100%;
   overflow: hidden;
   margin: 0 auto;
   width: 90%;
@@ -443,7 +444,7 @@ body {
 
 .about-wrapper {
   align-items: start;
-  gap: 9.6rem;
+  gap: 3.2rem 9.6rem;
 }
 
 .about-text {
