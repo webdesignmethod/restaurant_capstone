@@ -26,6 +26,7 @@ describe("Booking form tests", () => {
     );
 
     const fNameInput = screen.getByLabelText(/first name/i);
+    const lNameInput = screen.getByLabelText(/last name/i);
     const dateInput = screen.getByLabelText(/choose date/i);
     const timeInput = screen.getByLabelText(/choose time/i);
     const guestInput = screen.getByLabelText(/number of guests/i);
@@ -35,6 +36,10 @@ describe("Booking form tests", () => {
     expect(fNameInput).toBeInTheDocument();
     expect(fNameInput).toHaveAttribute("type", "text");
     expect(fNameInput).toHaveAttribute("id", "res-first-name");
+
+    expect(lNameInput).toBeInTheDocument();
+    expect(lNameInput).toHaveAttribute("type", "text");
+    expect(lNameInput).toHaveAttribute("id", "res-last-name");
 
     expect(dateInput).toBeInTheDocument();
     expect(dateInput).toHaveAttribute("type", "date");
@@ -90,13 +95,17 @@ describe("Booking form tests", () => {
         onSubmit={handleSubmit}
       />
     );
-
+    const fNameInput = screen.getByLabelText(/first name/i);
+    const lNameInput = screen.getByLabelText(/last name/i);
     const dateInput = screen.getByLabelText(/choose date/i);
     const timeInput = screen.getByLabelText(/choose time/i);
     const guestInput = screen.getByLabelText(/number of guests/i);
     const occasionInput = screen.getByLabelText(/occasion/i);
-    const submitBtn = screen.getByRole("button");
 
+    const submitBtn = screen.getByRole("button");
+    
+    fireEvent.change(fNameInput, { target: { value: "" } });
+    fireEvent.change(lNameInput, { target: { value: "" } });
     fireEvent.change(dateInput, { target: { value: "" } });
     fireEvent.change(timeInput, { target: { value: "" } });
     fireEvent.change(guestInput, { target: { value: "" } });
