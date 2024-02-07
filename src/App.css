@@ -662,6 +662,7 @@ footer {
   flex-flow: row wrap;
   gap: 24px;
   list-style: none;
+  margin-bottom: 3.2rem;
 }
 
 .social-icon {
@@ -687,4 +688,9 @@ footer {
 
 .social-link {
   display: inline-block;
+}
+
+.footer-disclaimer {
+  color: #fff;
+  font-size: 1.4rem;
 }

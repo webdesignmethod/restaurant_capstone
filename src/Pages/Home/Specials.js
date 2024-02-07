@@ -39,7 +39,7 @@ const Specials = () => {
                 <div className="card-price">$6.99</div>
               </div>
               <p className="card-description">
-                The famous greek salad of crispy lettuce, peppers, olives and
+                Crispy lettuce, peppers, olives and
                 our Chicago style feta cheese, garnished with crunchy garlic and
                 rosemary croutons.
               </p>
@@ -63,9 +63,7 @@ const Specials = () => {
                 <div className="card-price">$4.99</div>
               </div>
               <p className="card-description">
-                The famous greek salad of crispy lettuce, peppers, olives and
-                our Chicago style feta cheese, garnished with crunchy garlic and
-                rosemary croutons.
+              Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
               </p>
 
               <button
@@ -87,9 +85,7 @@ const Specials = () => {
                 <div className="card-price">$4.00</div>
               </div>
               <p className="card-description">
-                The famous greek salad of crispy lettuce, peppers, olives and
-                our Chicago style feta cheese, garnished with crunchy garlic and
-                rosemary croutons.
+              This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
               </p>
 
               <button

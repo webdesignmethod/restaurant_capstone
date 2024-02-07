@@ -4,6 +4,9 @@ import VerticalLogo from "../images/vertical-logo.png";
 import "../App.css";
 
 const Footer = () => {
+
+const currentYear = new Date().getFullYear();
+
   return (
     <footer>
       <div className="container footer-wrapper p-64">
@@ -94,6 +97,7 @@ const Footer = () => {
               <p className="social-icon-label">Instagram</p>
             </li>
           </ul>
+          <p className="footer-disclaimer">This is an educational project created with React.</p>
         </div>
       </div>
     </footer>
